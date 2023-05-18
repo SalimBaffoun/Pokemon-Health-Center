@@ -1,11 +1,22 @@
-import { Pokemon } from './pokemon.js';
-import { recoveryMachine } from './recovoryMachine.js';
+interface pokemon{
+    name:string;
+    type:string;
+    hp:number;
+    
 
-let pikachu = new Pokemon("Pikachu", 100);
+}
 
-pikachu.setHp(40);
-pikachu.checkHealth();
+class Pokemon{
+    name:string;
+    type:string;
+    hp:number;
 
+    constructor(name:string,type:string,hp:number){
+        this.name=name;
+        this.type=type;
+        this.hp=hp;
+    }
+}
 
 
 
