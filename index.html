@@ -1,33 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="style.css" />
-     <title>Pokemon Health Center</title>
-     <script src="dist/app.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Pokemon Health Center</title>
+    <script src="dist/app.js" defer></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-     <header>
-          <h1>Redonne vie à ton Pokemon!</h1>
-        </header>
-        <div class="cards">
-          <div class="pikachu-card">
-               <h2 class="card-title">Pikachu
-               </h2>
-            <div class="card-header">
-              <div class="card-img"></div>
-              <div class="health-bar">
-               <div class="health-fill"></div>
-              </div>
-            </div>
-            <div class="card-body">
-                <button class="card-button">Recovery</button>
-            </div>
-          </div>
-     
-        </div>
+  <header>
+    <h1>Vite! Redonne vie à tes Pokemons</h1>
+  </header>
+  <div class="card">
+    <div class="card-title">Pikachu</div>
+    <div class="card-hp">Niveau de vie : <span id="pikachu-hp"></span></div>
+    <button class="button" onclick="healPokemon('pikachu')">Soigner</button>
+  </div>
+  <div class="card">
+    <div class="card-title">Charizard</div>
+    <div class="card-hp">Niveau de vie : <span id="pikachu-hp"></span></div>
+    <button class="button" onclick="healPokemon('pikachu')">Soigner</button>
+  </div>
+  <div class="card">
+    <div class="card-title">Bulbizarre</div>
+    <div class="card-hp">Niveau de vie : <span id="pikachu-hp"></span></div>
+    <button class="button" onclick="healPokemon('pikachu')">Soigner</button>
+  </div>
+  <div class="card">
+    <div class="card-title">Florizarre</div>
+    <div class="card-hp">Niveau de vie : <span id="pikachu-hp"></span></div>
+    <button class="button" onclick="healPokemon('pikachu')">Soigner</button>
+  </div>
+  <div class="card">
+    <div class="card-title">Herbizarre</div>
+    <div class="card-hp">Niveau de vie : <span id="pikachu-hp"></span></div>
+    <button class="button" onclick="healPokemon('pikachu')">Soigner</button>
+  </div>
+  <div class="card">
+    <div class="card-title">Salamèche</div>
+    <div class="card-hp">Niveau de vie : <span id="pikachu-hp"></span></div>
+    <button class="button" onclick="healPokemon('pikachu')">Soigner</button>
+  </div>
+  <div class="card">
+    <div class="card-title">Machine à régénérer</div>
+    <button class="button" onclick="healAllPokemons()">Soigner tous les Pokemons</button>
+  </div>
+</body>
+</html>
+  
       </body>
      
 </body>
