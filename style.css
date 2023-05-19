@@ -80,6 +80,15 @@ header p {
   font-weight: bold;
 }
 
+.buttonAll {
+  background-color: #dd0000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
 .button:hover {
   background-color: #45a049;
 }
