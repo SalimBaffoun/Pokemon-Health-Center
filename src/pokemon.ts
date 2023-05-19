@@ -2,18 +2,25 @@ export class Pokemon {
 
     public name: string;
     public hp: number;
-    public playsound : string;
+    public playsound: string;
 
 
-    constructor(name: string, hp: number,playsound: string) {
+    constructor(name: string, hp: number, playsound: string) {
         this.name = name;
         this.hp = Math.max(Math.min(hp, 100), 0);
         this.playsound = playsound;
     }
 
     setHp(hp: number): void {
+        const previousHp = this.hp;
         this.hp = Math.max(Math.min(hp, 100), 0);
+    
+        
+        if (previousHp !== 100 && this.hp === 100) {
+            this.playSound();
+        }
     }
+    
 
     getHp(): number {
         return this.hp;
@@ -23,10 +30,11 @@ export class Pokemon {
         return this.playsound;
     }
 
-    playSound() {
-        const sound = new Audio(`../assets/sound/${this.playsound}.ogg`);
+    playSound(): void {
+        const sound = new Audio(`./assets/sound/${this.playsound}.mp3`);
         sound.play();
     }
+    
 
     levelHealth(): void {
         console.log(`${this.name} a ${this.hp} points de vie`);
@@ -37,13 +45,12 @@ export class Pokemon {
     updateHealthBar(): void {
         let healthStatus: string;
         let progressBarClass: string;
-
-
-        if (this.hp <= 0) {
+        
+        if (this.hp <= 5) {
 
             healthStatus = 'KO';
             progressBarClass = 'hp-empty';
-        } else if (this.hp <= 50) {
+        } else if (this.hp <= 70) {
             healthStatus = 'Blessé';
             progressBarClass = 'hp-low';
         } else {
@@ -60,8 +67,8 @@ export class Pokemon {
 
         const healthStatusElement = document.getElementById(`${this.name.toLowerCase()}-health-status`);
         if (healthStatusElement) {
-        healthStatusElement.innerText = `Etat : ${healthStatus}`;
-  }
+            healthStatusElement.innerText = `Etat : ${healthStatus}`;
+        }
 
     }
 }
