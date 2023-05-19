@@ -35,10 +35,28 @@ export class Pokemon {
             progressBarClass = 'hp-high';
         }
     
-        const progressBar = document.getElementById(`${this.name.toLowerCase()}-hp-bar`);
+        const progressBar = document.getElementById(`${this.name.toLowerCase()}-hp-bar`) as HTMLElement;
         progressBar?.classList.remove('hp-empty', 'hp-low', 'hp-high');
         progressBar?.classList.add(progressBarClass);
+
+        progressBar.style.width = `${this.hp}%`;
+        progressBar.style.backgroundColor = getProgressBarColor(progressBarClass);
+
         
         console.log(`${this.name} - Jauge de santé : ${healthStatus}`);
     }
 }
+
+function getProgressBarColor(progressBarClass: string): string {
+    switch (progressBarClass) {
+      case 'hp-empty':
+        return 'red';
+      case 'hp-low':
+        return 'yellow';
+      case 'hp-high':
+        return 'green';
+      default:
+        return 'gray'; // Couleur par défaut si la classe n'est pas reconnue
+    }
+  }
+  
