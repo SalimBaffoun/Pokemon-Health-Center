@@ -4,14 +4,14 @@ export class recoveryMachine {
 
 
     recoveryOne(pokemons: Pokemon[], index: number): void {
-        if (index >= 0 && index < pokemons.length) {
-          const pokemon = pokemons[index];
-          pokemon.setHp(pokemon.getHp() + 10);
-          pokemon.updateHealthBar();
-          console.log(`${pokemon.name} a récupéré 10 points de vie`);
-        }
+      if (index >= 0 && index < pokemons.length) {
+        const pokemon = pokemons[index];
+        pokemon.setHp(pokemon.getHp() + 10);
+        pokemon.updateHealthBar(); // Ajoutez cette ligne pour mettre à jour la barre de progression
+        console.log(`${pokemon.name} a récupéré 10 points de vie`);
       }
-      
+    }
+  
     
 
 
