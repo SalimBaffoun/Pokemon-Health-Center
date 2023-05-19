@@ -7,8 +7,10 @@ export class recoveryMachine {
       if (index >= 0 && index < pokemons.length) {
         const pokemon = pokemons[index];
         pokemon.setHp(pokemon.getHp() + 10);
-        pokemon.updateHealthBar(); // Ajoutez cette ligne pour mettre à jour la barre de progression
+        pokemon.updateHealthBar(); 
         console.log(`${pokemon.name} a récupéré 10 points de vie`);
+      } else {
+        console.log("Le Pokémon n'existe pas");
       }
     }
   
