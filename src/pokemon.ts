@@ -2,10 +2,12 @@ export class Pokemon {
 
     public name: string;
     public hp: number;
+    public voice : string
 
-    constructor(name: string, hp: number) {
+    constructor(name: string, hp: number,voice: string) {
         this.name = name;
         this.hp = Math.max(Math.min(hp, 100), 0);
+        this.voice = voice;
     }
 
     setHp(hp: number): void {
@@ -20,11 +22,13 @@ export class Pokemon {
         console.log(`${this.name} a ${this.hp} points de vie`);
     }
 
+
+
     updateHealthBar(): void {
         let healthStatus: string;
         let progressBarClass: string;
-        
-        if (this.hp <= 0) {
+
+        if (this.hp <= 10) {
             healthStatus = 'KO';
             progressBarClass = 'hp-empty';
         } else if (this.hp <= 50) {
@@ -34,7 +38,7 @@ export class Pokemon {
             healthStatus = 'en pleine forme';
             progressBarClass = 'hp-high';
         }
-    
+
         const progressBar = document.getElementById(`${this.name.toLowerCase()}-hp-bar`) as HTMLElement;
         progressBar?.classList.remove('hp-empty', 'hp-low', 'hp-high');
         progressBar?.classList.add(progressBarClass);
@@ -42,21 +46,20 @@ export class Pokemon {
         progressBar.style.width = `${this.hp}%`;
         progressBar.style.backgroundColor = getProgressBarColor(progressBarClass);
 
-        
+
         console.log(`${this.name} - Jauge de santé : ${healthStatus}`);
     }
 }
 
 function getProgressBarColor(progressBarClass: string): string {
     switch (progressBarClass) {
-      case 'hp-empty':
-        return 'red';
-      case 'hp-low':
-        return 'yellow';
-      case 'hp-high':
-        return 'green';
-      default:
-        return 'gray'; // Couleur par défaut si la classe n'est pas reconnue
+        case 'hp-empty':
+            return 'red';
+        case 'hp-low':
+            return 'yellow';
+        case 'hp-high':
+            return 'green';
+        default:
+            return 'gray';
     }
-  }
-  
+}
