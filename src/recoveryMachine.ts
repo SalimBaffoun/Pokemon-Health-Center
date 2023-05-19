@@ -3,6 +3,7 @@ import { Pokemon } from "./pokemon";
 export class recoveryMachine {
 
 
+
   recoveryOne(pokemons: Pokemon[], index: number): void {
     if (index >= 0 && index < pokemons.length) {
       const pokemon = pokemons[index];
@@ -19,6 +20,7 @@ export class recoveryMachine {
   
       if (previousHp <= 10 && currentHp > 10) {
         console.log(`${pokemon.name} n'est plus KO`);
+
       }
     }
   }

@@ -2,12 +2,13 @@ export class Pokemon {
 
     public name: string;
     public hp: number;
-    public voice : string
+    public playsound : string;
 
-    constructor(name: string, hp: number,voice: string) {
+
+    constructor(name: string, hp: number,playsound: string) {
         this.name = name;
         this.hp = Math.max(Math.min(hp, 100), 0);
-        this.voice = voice;
+        this.playsound = playsound;
     }
 
     setHp(hp: number): void {
@@ -16,6 +17,15 @@ export class Pokemon {
 
     getHp(): number {
         return this.hp;
+    }
+
+    getSound() {
+        return this.playsound;
+    }
+
+    playSound() {
+        const sound = new Audio(`../assets/sound/${this.playsound}.ogg`);
+        sound.play();
     }
 
     levelHealth(): void {
@@ -28,7 +38,9 @@ export class Pokemon {
         let healthStatus: string;
         let progressBarClass: string;
 
+
         if (this.hp <= 0) {
+
             healthStatus = 'KO';
             progressBarClass = 'hp-empty';
         } else if (this.hp <= 50) {
@@ -66,3 +78,5 @@ function getProgressBarColor(progressBarClass: string): string {
             return 'gray';
     }
 }
+
+
