@@ -41,5 +41,4 @@ export class Pokemon {
         
         console.log(`${this.name} - Jauge de santé : ${healthStatus}`);
     }
-    
 }
