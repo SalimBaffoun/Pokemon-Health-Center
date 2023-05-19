@@ -1,38 +1,45 @@
-export class Pokemon  {
+export class Pokemon {
 
     public name: string;
-
     public hp: number;
 
-    
     constructor(name: string, hp: number) {
         this.name = name;
-        this.hp = Math.min(hp,0);
-        this.hp = Math.max(hp,100);
+        this.hp = Math.max(Math.min(hp, 100), 0);
     }
 
     setHp(hp: number): void {
-        this.hp = hp;
+        this.hp = Math.max(Math.min(hp, 100), 0);
     }
 
     getHp(): number {
         return this.hp;
     }
-    
+
     levelHealth(): void {
-                
         console.log(`${this.name} a ${this.hp} points de vie`);
     }
-    
 
-    checkHealth(): void {
+    updateHealthBar(): void {
+        let healthStatus: string;
+        let progressBarClass: string;
+        
         if (this.hp <= 0) {
-            console.log(`${this.name} est KO`);
+            healthStatus = 'KO';
+            progressBarClass = 'hp-empty';
         } else if (this.hp <= 50) {
-            console.log(`${this.name} est blessé`);
+            healthStatus = 'blessé';
+            progressBarClass = 'hp-low';
         } else {
-            console.log(`${this.name} est en pleine forme`);
+            healthStatus = 'en pleine forme';
+            progressBarClass = 'hp-high';
         }
-    } 
+    
+        const progressBar = document.getElementById(`${this.name.toLowerCase()}-hp-bar`);
+        progressBar?.classList.remove('hp-empty', 'hp-low', 'hp-high');
+        progressBar?.classList.add(progressBarClass);
+        
+        console.log(`${this.name} - Jauge de santé : ${healthStatus}`);
+    }
+    
 }
-
