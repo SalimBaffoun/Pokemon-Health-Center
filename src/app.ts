@@ -1,30 +1,34 @@
 import { Pokemon } from "./pokemon.js";
 import { recoveryMachine } from "./recoveryMachine.js";
 
-const hpValueElt = document.getElementById(".hp-value");
-const hpBarElt = document.getElementById(".hp-bar");
+const hpValueElt = document.querySelector(".hp-value")! as HTMLElement;
+const hpBarElt = document.querySelector(".hp-bar");
 
 
-const bulbizarre = new Pokemon('Bulbizarre', 50);
-    const pokemons = [bulbizarre];
-    bulbizarre.levelHealth();
-    bulbizarre.updateHealthBar();
+const hpValueElts = document.querySelectorAll(".hp-value");
+const hpBarElts = document.querySelectorAll(".progress-bar-inner");
 
-    const machine = new recoveryMachine();
-    machine.recoveryOne(pokemons, 0);
-    bulbizarre.levelHealth();
+const pokemons = [
+    new Pokemon("Bulbizarre", 0),
+    new Pokemon("Herbizarre", 90),
+    new Pokemon("Florizarre", 40),
+    new Pokemon("salameche", 0),
+    new Pokemon("reptincel", 10),
+    new Pokemon("dracaufeu", 100),
+
     
+];
 
-    
-    
-    // bulbizarre.setHp(40);
-    // bulbizarre.levelHealth();
-    // bulbizarre.updateHealthBar();
 
-    // bulbizarre.setHp(0);
-    // bulbizarre.levelHealth();
-    // bulbizarre.updateHealthBar();
-    
+for (let i = 0; i < pokemons.length; i++) {
+    const pokemon = pokemons[i];
+    const hpValueElt = hpValueElts[i];
+    const hpBarElt = hpBarElts[i];
+
+    hpValueElt.innerHTML = `${pokemon.getHp()}`;
+    pokemon.updateHealthBar();
+}
+
 
     
   
