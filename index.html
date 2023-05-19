@@ -1,73 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Pokemon Health Center</title>
-    <script type="module" src="dist/app.js" defer></script>
-  <link rel="stylesheet" type="text/css" href="style.css">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Pokemon Health Center</title>
+ 
+  <link rel="stylesheet" type="text/css" href="style.css"> 
+  <script type="module" src="dist/app.js" defer></script>
 </head>
+
 <body>
   <header>
     <h1>Vite! Redonne vie à tes Pokemons</h1>
   </header>
   <div class="container">
     <div class="pokemon-card">
-      <img src="assets/img/dfba3jd-2f681717-5742-46ad-8353-b1ffe265bc60.png" alt="Pikachu" />
-      <div class="card-title">Pikachu</div>
-      <div class="card-hp">Niveau de vie : <span id="pikachu-hp"></span></div>
-      <button class="button" onclick="recoveryOne()">Soigner</button>
-    </div>
-
-
-    <div class="pokemon-card">
-      <img src="assets/img/téléchargement.jpeg" alt="Bulbizarre" />
+      <img src="assets/img/téléchargement.jpeg" alt="Bulbizarre" />
       <div class="card-title">Bulbizarre</div>
-      <div class="card-hp">Niveau de vie : <span id="bulbasaur-hp"></span></div>
-      <button class="button" onclick="healPokemon('bulbasaur')">Soigner</button>
+      <div class="progress-bar">
+        <div  class="progress-bar-inner"></div>
+      </div>
+      <div class="card-hp">Niveau de vie : <span class="hp-value"></span></div>
+      <button class="button">Soigner</button>
 
     </div>
+
+
+<!-- 
 
     <div class="pokemon-card">
       <img src="assets/img/Herbizarre-RFVF.png" alt="Herbizarre" />
       <div class="card-title">Herbizarre</div>
-
-      <div class="card-hp">Niveau de vie : <span id="ivysaur-hp"></span></div>
-      <button class="button" onclick="healPokemon('ivysaur')">Soigner</button>
+      <div class="progress-bar">
+        <div id="ivysaur-hp-bar" class="progress-bar-inner"></div>
+      </div>
+      <div class="card-hp">Niveau de vie : <span id="ivysaur-hp-value" class="hp-value"></span></div>
+      <button class="button" onclick="recoveryOne(1)">Soigner</button>
     </div>
 
     <div class="pokemon-card">
       <img src="assets/img/florizarre.webp" alt="Florizarre" />
       <div class="card-title">Florizarre</div>
-      <div class="card-hp">Niveau de vie : <span id="venusaur-hp"></span></div>
-      <button class="button" onclick="healPokemon('venusaur')">Soigner</button>
-
+      <div class="progress-bar">
+        <div id="venusaur-hp-bar" class="progress-bar-inner"></div>
+      </div>
+      <div class="card-hp">Niveau de vie : <span id="venusaur-hp-value" class="hp-value"></span></div>
+      <button class="button" onclick="recoveryOne(2)">Soigner</button>
     </div>
 
     <div class="pokemon-card">
-      <img src="assets/img/salamèche.webp" alt="Salamèche" />
-      <div class="card-title">Salamèche</div>
+      <img src="assets/img/salamèche.webp" alt="Salameche" />
+      <div class="card-title">Salameche</div>
+      <div class="progress-bar">
+        <div id="charmander-hp-bar" class="progress-bar-inner"></div>
+      </div>
+      <div class="card-hp">Niveau de vie : <span id="charmander-hp-value" class="hp-value"></span></div>
+      <button class="button" onclick="recoveryOne(3)">Soigner</button>
+    </div>
 
-      <div class="card-hp">Niveau de vie : <span id="charmander-hp"></span></div>
-      <button class="button" onclick="healPokemon('charmander')">Soigner</button>
+    <div class="pokemon-card">
+      <img
+        src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fraw.githubusercontent.com%2FPokeAPI%2Fsprites%2Fmaster%2Fsprites%2Fpokemon%2Fother%2Fofficial-artwork%2F5.png"
+        alt="Reptincel" />
+      <div class="card-title">Reptincel</div>
+      <div class="progress-bar">
+        <div id="reptincel-hp-bar" class="progress-bar-inner"></div>
+      </div>
+      <div class="card-hp">Niveau de vie : <span id="reptincel-hp-value" class="hp-value"></span></div>
+      <button class="button" onclick="recoveryOne(4)">Soigner</button>
     </div>
 
     <div class="pokemon-card">
       <img src="assets/img/dracaufeu.png" alt="Dracaufeu" />
       <div class="card-title">Dracaufeu</div>
-      <div class="card-hp">Niveau de vie : <span id="charizard-hp"></span></div>
-      <button class="button" onclick="healPokemon('charizard')">Soigner</button>
+      <div class="progress-bar">
+        <div id="charizard-hp-bar" class="progress-bar-inner"></div>
+      </div>
+      <div class="card-hp">Niveau de vie : <span id="charizard-hp-value" class="hp-value"></span></div>
+      <button class="button" onclick="recoveryOne(5)">Soigner</button>
     </div>
 
     <div class="machine-container">
       <div class="machine-card">
         <div class="card-title">Machine à régénérer</div>
-        <button class="button" onclick="healAllPokemons()">Soigner tous les Pokemons</button>
+        <button class="button" onclick="recoveryAll(pokemons)">Soigner tous les Pokemons</button>
       </div>
-    </div>
+    </div> -->
   </div>
-     
-
 </body>
+
 </html>

@@ -1,13 +1,39 @@
 import { Pokemon } from "./pokemon.js";
-import { recoveryMachine } from "./recoveryMachine";
+import { recoveryMachine } from "./recoveryMachine.js";
 
-let pikachu = new Pokemon("Pikachu", 100,);
-let bulbizarre = new Pokemon("Bulbizarre", 100,);
+const hpValueElt = document.getElementById(".hp-value");
+const hpBarElt = document.getElementById(".hp-bar");
 
-pikachu.setHp(50);
-bulbizarre.setHp(0);
 
-pikachu.checkHealth();
-bulbizarre.checkHealth();
+const bulbizarre = new Pokemon('Bulbizarre', 50);
+    const pokemons = [bulbizarre];
+    bulbizarre.levelHealth();
+    bulbizarre.updateHealthBar();
 
+    const machine = new recoveryMachine();
+    machine.recoveryOne(pokemons, 0);
+    bulbizarre.levelHealth();
+    
+
+    
+    
+    // bulbizarre.setHp(40);
+    // bulbizarre.levelHealth();
+    // bulbizarre.updateHealthBar();
+
+    // bulbizarre.setHp(0);
+    // bulbizarre.levelHealth();
+    // bulbizarre.updateHealthBar();
+    
+
+    
+  
+
+
+
+
+    
+
+
+    
 
