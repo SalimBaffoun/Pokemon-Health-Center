@@ -38,14 +38,16 @@ export class Pokemon {
         let healthStatus: string;
         let progressBarClass: string;
 
-        if (this.hp <= 10 ) {
+
+        if (this.hp <= 0) {
+
             healthStatus = 'KO';
             progressBarClass = 'hp-empty';
         } else if (this.hp <= 50) {
-            healthStatus = 'blessé';
+            healthStatus = 'Blessé';
             progressBarClass = 'hp-low';
         } else {
-            healthStatus = 'en pleine forme';
+            healthStatus = 'En pleine forme';
             progressBarClass = 'hp-high';
         }
 
@@ -56,8 +58,11 @@ export class Pokemon {
         progressBar.style.width = `${this.hp}%`;
         progressBar.style.backgroundColor = getProgressBarColor(progressBarClass);
 
+        const healthStatusElement = document.getElementById(`${this.name.toLowerCase()}-health-status`);
+        if (healthStatusElement) {
+        healthStatusElement.innerText = `Etat : ${healthStatus}`;
+  }
 
-        console.log(`${this.name} - Jauge de santé : ${healthStatus}`);
     }
 }
 
