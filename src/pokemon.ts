@@ -65,7 +65,7 @@ export class Pokemon {
         if (this.hp <= 5) {
             
             progressBarClass = 'hp-empty';
-        } else if (this.hp <= 70) {
+        } else if (this.hp <= 80) {
             
             progressBarClass = 'hp-low';
         } else {
@@ -98,9 +98,9 @@ export class Pokemon {
 
         getStatus(): string {
             if (this.hp <= 5) {
-                return 'Mort';
+                return 'K.O.';
             }
-            if (this.hp <= 70) {
+            if (this.hp <= 80) {
                 return 'Blessé';
             }
             return 'En pleine forme';
