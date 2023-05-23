@@ -163,5 +163,8 @@ h2 {
   align-items: center;
   text-align: center;
   background-color: #9c282881;
+  border-radius: 10px;
+  width: 30%;
+  margin-left: 35%;
 }
 
