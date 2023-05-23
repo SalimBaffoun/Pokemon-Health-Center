@@ -2,6 +2,13 @@ import { Pokemon } from "./pokemon";
 
 export class recoveryMachine {
 
+  isHealthyRoomFull(): boolean {
+    const healthyContainer = document.getElementById("pokemon-container") as HTMLElement;
+    const healthyPokemons = Array.from(healthyContainer.querySelectorAll(".pokemon-card"));
+    return healthyPokemons.length >= 6;
+  }
+  
+
 
 
   recoveryOne(pokemons: Pokemon[], index: number): void {
@@ -9,8 +16,12 @@ export class recoveryMachine {
       const pokemon = pokemons[index];
       const previousHp = pokemon.getHp();
   
+      if (this.isHealthyRoomFull()) {
+        console.log("La salle de soins est déjà pleine. Impossible de soigner plus de Pokémon.");
+        return;
+      }
       pokemon.setHp(previousHp + 10);
-      pokemon.updateHealthBar(); // Mise à jour de la barre de progression
+      pokemon.updateHealthBar();
   
       const currentHp = pokemon.getHp();
       const state = this.getPokemonState(currentHp);
@@ -35,25 +46,37 @@ export class recoveryMachine {
     }
   }
   
-    
-
-
-
-    
-    recoveryAll(pokemons: Pokemon[]): void {
-        let allMaxHealth = true;
-
-        for (let i = 0; i < pokemons.length; i++) {
-            const pokemon = pokemons[i];
-            if (pokemon.getHp() < 100) {
-                pokemon.setHp(pokemon.getHp() + 100);
-                pokemon.updateHealthBar();
-                allMaxHealth = false;
-            }
-        }
-
-        if (allMaxHealth) {
-            console.log("Tous les Pokémon sont au maximum de leur forme");
-        }
+  recoveryAll(pokemons: Pokemon[]): void {
+    let allMaxHealth = true;
+    const maxPokemonCount = 6;
+    let healedPokemonCount = 0;
+  
+    const healthyContainer = document.getElementById("pokemon-container") as HTMLElement;
+    const healthyPokemons = Array.from(healthyContainer.querySelectorAll(".pokemon-card"));
+  
+    for (let i = 0; i < healthyPokemons.length; i++) {
+      const pokemonCard = healthyPokemons[i];
+      const pokemonName = pokemonCard.querySelector(".card-title")?.textContent;
+      const pokemon = pokemons.find((pokemon) => pokemon.name === pokemonName);
+  
+      if (pokemon && pokemon.getHp() < 100 && healedPokemonCount < maxPokemonCount) {
+        pokemon.setHp(100);
+        pokemon.updateHealthBar();
+        allMaxHealth = false;
+        healedPokemonCount++;
+  
+      
+        pokemonCard.remove();
+      }
     }
+  
+    if (allMaxHealth) {
+      console.log("Tous les Pokémon sont au maximum de leur forme");
+    }
+  }
+  
+  
+  
 }
+
+

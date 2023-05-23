@@ -9,14 +9,14 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
-  background-image: url(assets/img/wallpaper-mania.com_High_resolution_wallpaper_background_ID_77700946456.jpg);
+  background-image: url("./assets/img/melissa-yoyotte-asset.jpg");
+  background-size: cover;
 }
 
 /* CSS pour le header Pokemon */
 
 header {
-  background-color: #368ff49a;
+  background-color: #368ff44a;
   padding: 20px;
   text-align: center;
 }
@@ -38,10 +38,18 @@ header p {
   letter-spacing: 1px;
 }
 
-.container {
+
+.healthy-pokemon {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.waiting-room {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: rgba(0, 255, 255, 0.205);
 }
 
 .pokemon-card {
@@ -89,6 +97,7 @@ header p {
   cursor: pointer;
   font-weight: bold;
 }
+
 .button:hover {
   background-color: #45a049;
 }
@@ -107,12 +116,13 @@ header p {
   padding: 20px;
   text-align: center;
 }
+
 .progress-bar {
   width: 100%;
   height: 20px;
-  background-color: #f3f3f3;
-  border-radius: 5px;
-  overflow: hidden;
+  background-color: #ddd;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .progress-bar-inner {
@@ -121,13 +131,31 @@ header p {
 }
 
 .hp-empty {
-  background-color: #f44336;
+  background-color: #f44336 !important;
 }
 
 .hp-low {
-  background-color: #ffc107;
+  background-color: #ffc107 !important;
 }
 
 .hp-high {
-  background-color: #4caf50;
+  background-color: #4caf50 !important;
 }
+
+.scroll-container {
+  height: 100%;
+  overflow: auto;
+  display: flex;
+
+
+}
+h1 {
+  font-size: 50px;
+  color: #1321db;
+  text-shadow: 2px 2px #000;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  align-items: center;
+  text-align: center;
+}
+
