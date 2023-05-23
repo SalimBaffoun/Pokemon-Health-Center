@@ -16,18 +16,22 @@ body {
 /* CSS pour le header Pokemon */
 
 header {
-  background-color: #368ff44a;
+  background-color: #368ff4c3;
   padding: 20px;
   text-align: center;
 }
 
 header h1 {
   font-family: 'Press Start 2P', cursive;
-  font-size: 32px;
-  color: #fff;
+  font-size: 50px;
+  color: #e79e0e;
   text-shadow: 2px 2px #000;
   letter-spacing: 2px;
   margin-bottom: 10px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  
 }
 
 header p {
@@ -49,7 +53,7 @@ header p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: rgba(0, 255, 255, 0.205);
+  background-color: rgba(61, 146, 146, 0.205);
 }
 
 .pokemon-card {
@@ -149,13 +153,15 @@ header p {
 
 
 }
-h1 {
+h2 {
+  margin-top: 50px;
   font-size: 50px;
-  color: #1321db;
+  color: #fcfcfc;
   text-shadow: 2px 2px #000;
   letter-spacing: 2px;
   margin-bottom: 10px;
   align-items: center;
   text-align: center;
+  background-color: #9c282881;
 }
 

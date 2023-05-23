@@ -16,8 +16,8 @@ function checkSelectionLimit(container: HTMLElement): boolean {
 
 
 const pokemonData = [
- new Pokemon("Pikachu", 5, "Pika pika !", "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png"),
-  new Pokemon("Bulbizarre", 45, "Bulbi !", "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"),
+ new Pokemon("Pikachu", 5, "Pikachuu", "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png"),
+  new Pokemon("Bulbizarre", 45, "bulbasaur", "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"),
   new Pokemon("Salamèche", 39, "Sala !", "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png"),
   new Pokemon("Carapuce", 44, "Cara !", "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png"),
   new Pokemon("Dracaufeu", 78, "Dracaufeu !", "https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png"),
