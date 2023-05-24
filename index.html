@@ -8,7 +8,7 @@
   <title>Pokemon Health Center</title>
 
   <link rel="stylesheet" type="text/css" href="style.css">
-  <script type="module" src="dist/app.js" defer></script>
+  <script type="module" src="dist/app.js"></script>
 </head>
 
 <body>
@@ -16,89 +16,28 @@
     <h1>Vite! Redonne vie à tes Pokemons</h1>
   </header>
   <div class="container">
-    <div class="pokemon-card">
-      <img src="./assets/img/250px-Bulbizarre-RFVF.png" alt="Bulbizarre" />
-      <div class="card-title">Bulbizarre</div>
-      <p id="bulbizarre-state" class="pokemon-state"></p>
-      <p id="bulbizarre-health-status"></p>
-      <div class="progress-bar">
-        <div class="progress-bar-inner" id="bulbizarre-hp-bar"></div>
-      </div>
-      <div class="card-hp">Niveau de vie : <span class="hp-value"></span></div>
-      <button class="button">Soigner</button>
+    <div>
+      <h2>SALLE D'ATTENTE</h2>
     </div>
-
-    <div class="pokemon-card">
-      <img src="assets/img/Herbizarre-RFVF.png" alt="Herbizarre" />
-      <div class="card-title">Herbizarre</div>
-      <p id="herbizarre-state" class="pokemon-state"></p>
-      <p id="herbizarre-health-status"></p>
-      <div class="progress-bar">
-        <div class="progress-bar-inner" id="herbizarre-hp-bar"></div>
-      </div>
-      <div class="card-hp">Niveau de vie : <span class="hp-value"></span></div>
-      <button class="button">Soigner</button>
+    <div>
+      <div id="waiting-room-container" class="waiting-room"></div>
     </div>
-
-
-    <div class="pokemon-card">
-      <img src="assets/img/florizarre.webp" alt="Florizarre" />
-      <div class="card-title">Florizarre</div>
-      <p id="florizarre-state" class="pokemon-state"></p>
-      <p id="florizarre-health-status"></p>
-      <div class="progress-bar">
-        <div class="progress-bar-inner" id="florizarre-hp-bar"></div>
-      </div>
-      <div class="card-hp">Niveau de vie : <span class="hp-value"></span></div>
-      <button class="button">Soigner</button>
-    </div>
-
-    <div class="pokemon-card">
-      <img src="assets/img/salamèche.webp" alt="Salameche" />
-      <div class="card-title">Salameche</div>
-      <p id="salameche-state" class="pokemon-state"></p>
-      <p id="salameche-health-status"></p>
-      <div class="progress-bar">
-        <div class="progress-bar-inner" id="salameche-hp-bar"></div>
-      </div>
-      <div class="card-hp">Niveau de vie : <span class="hp-value"></span></div>
-      <button class="button">Soigner</button>
-    </div>
-
-    <div class="pokemon-card">
-      <img
-        src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fraw.githubusercontent.com%2FPokeAPI%2Fsprites%2Fmaster%2Fsprites%2Fpokemon%2Fother%2Fofficial-artwork%2F5.png"
-        alt="Reptincel" />
-      <div class="card-title">Reptincel</div>
-      <p id="reptincel-state" class="pokemon-state"></p>
-      <p id="reptincel-health-status"></p>
-      <div class="progress-bar">
-        <div class="progress-bar-inner" id="reptincel-hp-bar"></div>
-      </div>
-      <div class="card-hp">Niveau de vie : <span class="hp-value"></span></div>
-      <button class="button">Soigner</button>
-    </div>
-
-    <div class="pokemon-card">
-      <img src="assets/img/dracaufeu.png" alt="Dracaufeu" />
-      <div class="card-title">Dracaufeu</div>
-      <p id="dracaufeu-state" class="pokemon-state"></p>
-      <p id="dracaufeu-health-status"></p>
-      <div class="progress-bar">
-        <div class="progress-bar-inner" id="dracaufeu-hp-bar"></div>
-      </div>
-      <div class="card-hp">Niveau de vie : <span class="hp-value"></span></div>
-      <button class="button">Soigner</button>
-    </div>
-
-
   </div>
+  <div>
+    <h2>SALLE DE SOINS</h2>
+  </div>
+    <div>
+      <div id="pokemon-container" class="healthy-pokemon"></div>
+      
+    </div>
+    
   <div class="machine-container">
     <div class="machine-card">
-      <div class="card-title">Machine à régénérer</div>
+      <h3 class="card-title">Machine à régénérer</h3>
       <button class="buttonAll">Soigner tous les Pokemons</button>
     </div>
   </div>
 </body>
+
 
 </html>
