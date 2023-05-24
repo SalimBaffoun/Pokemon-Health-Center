@@ -17,16 +17,16 @@ function checkSelectionLimit(container: HTMLElement): boolean {
 
 const pokemonData = [
  new Pokemon("Pikachu", 5, "Pikachuu", "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png"),
-  new Pokemon("Bulbizarre", 45, "bulbasaur", "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"),
+  new Pokemon("Bulbizarre", 5, "bulbasaur", "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"),
   new Pokemon("Salamèche", 39, "Sala !", "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png"),
-  new Pokemon("Carapuce", 44, "Cara !", "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png"),
+  new Pokemon("Carapuce", 80, "Cara !", "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png"),
   new Pokemon("Dracaufeu", 78, "Dracaufeu !", "https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png"),
   new Pokemon("Mewtwo", 6, "Mewtwo !", "https://assets.pokemon.com/assets/cms2/img/pokedex/full/150.png"),
   new Pokemon("Mew", 10, "Mew !", "https://assets.pokemon.com/assets/cms2/img/pokedex/full/151.png"),
   new Pokemon("Rondoudou", 11, "Rondoudou !", "https://assets.pokemon.com/assets/cms2/img/pokedex/full/039.png"),
-  new Pokemon("Ronflex", 60, "Ronflex !", "https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png"),
+  new Pokemon("Ronflex", 85, "Ronflex !", "https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png"),
   new Pokemon("Piafabec", 40, "Piafabec !", "https://assets.pokemon.com/assets/cms2/img/pokedex/full/021.png"),
-  new Pokemon("Rattata", 30, "Rattata !", "https://assets.pokemon.com/assets/cms2/img/pokedex/full/019.png"),
+  new Pokemon("Rattata", 85, "Rattata !", "https://assets.pokemon.com/assets/cms2/img/pokedex/full/019.png"),
   new Pokemon("Rattatac", 55, "Rattatac !", "https://assets.pokemon.com/assets/cms2/img/pokedex/full/020.png"),
 ];
 
