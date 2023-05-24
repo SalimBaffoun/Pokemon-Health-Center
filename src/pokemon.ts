@@ -106,20 +106,7 @@ export class Pokemon {
             return 'En pleine forme';
 
         }
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
+        
     createCard(pokemon: Pokemon): HTMLElement {
         const card = document.createElement("div");
         card.classList.add("pokemon-card");

@@ -47,7 +47,7 @@ export class recoveryMachine {
   getPokemonState(hp: number): string {
     if (hp <= 10) {
       return 'KO';
-    } else if (hp <= 50) {
+    } else if (hp <= 80) {
       return 'Blessé';
     } else {
       return 'En pleine forme';
